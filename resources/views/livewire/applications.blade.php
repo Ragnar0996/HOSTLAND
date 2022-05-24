@@ -20,6 +20,18 @@
             @if($isOpen)
                 @include('livewire.create')
             @endif
+
+            
+
+            {{-- <livewire:datatable
+                model="App\Models\Application"
+                searchable = "nombre"
+            > --}}
+
+            {{-- <livewire:applications-table/> --}}
+
+           
+
             <table class="table-fixed w-full">
                 <thead>
                     <tr class="bg-gray-100">
