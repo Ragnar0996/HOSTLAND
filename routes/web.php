@@ -30,4 +30,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('application', Applications::class)->middleware('auth');
+Route::get('application', Applications::class)->middleware('auth')->name('application');

@@ -37,7 +37,7 @@ class Applications extends Component
         $this->telefono = '';
         $this->email = '';
         $this->etiqueta = '';
-        $this->application_id = '';
+        // $this->application_id = '';
     }
 
     public function store(){
@@ -50,7 +50,7 @@ class Applications extends Component
             'telefono' => 'required',
             'email' => 'required',
             'etiqueta' => 'required',
-            'application_id' => 'required'
+            // 'application_id' => 'required'
         ]);
 
         Application::updateOrCreate(['id' => $this->application_id], [
@@ -62,18 +62,18 @@ class Applications extends Component
             'telefono' => $this->telefono,
             'email' => $this->email,
             'etiqueta' => $this->etiqueta,
-            'application_id' => $this->application_id
+            // 'application_id' => $this->application_id
         ]);
 
         session()->flash('message', 
-            $this->post_id ? 'Solicitud actualizada correctamente.' : 'Solicitud creada correctamente.');
+            $this->application_id ? 'Solicitud actualizada correctamente.' : 'Solicitud creada correctamente.');
 
         $this->closeModal();
         $this->resetInputFields();
     }
 
     public function edit($id){
-        $post = Application::findOrFail($id);
+        $application = Application::findOrFail($id);
         $this->application_id = $id;
         $this->fecha = $application->fecha;
         $this->centro = $application->centro;
@@ -83,7 +83,7 @@ class Applications extends Component
         $this->telefono = $application->telefono;
         $this->email = $application->email;
         $this->etiqueta = $application->etiqueta;
-        $this->application_id = $application->application_id;
+        // $this->application_id = $application->application_id;
 
         $this->openModal();
     }

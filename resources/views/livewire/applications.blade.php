@@ -48,8 +48,8 @@
                         <td class="border px-4 py-2">{{ $app->telefono }}</td>
                         <td class="border px-4 py-2">{{ $app->etiqueta }}</td>
                         <td class="border px-4 py-2">
-                        <button wire:click="edit({{ $app->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
-                            <button wire:click="delete({{ $app->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+                        <button wire:click="edit({{ $app->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Editar</button>
+                            <button wire:click="delete({{ $app->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Eliminar</button>
                         </td>
                     </tr>
                     @endforeach
