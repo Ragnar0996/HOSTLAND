@@ -1,6 +1,9 @@
 <?php
 
+// use App\Models\Application;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Livewire\Applications;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +29,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('application', Applications::class)->middleware('auth');
